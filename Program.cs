@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace DIS_Assignmnet1_SPRING_2022
 {
@@ -83,8 +84,13 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                // write your code here
-                String final_string = "";
+               
+                    int len = s.Length;
+                    if (len > 10000)//user defined exceptions
+                    {
+                        Console.WriteLine("Lenght of input string should be less than " + len);
+                    }
+                    String final_string = "";
                 foreach (char le in s) // foreach condition
                 { 
                     if (le != 'A' & le != 'E' & le != 'I' & le != 'O' & le != 'U' & le != 'a' & le != 'e' & le != 'i' & le != 'o' & le != 'u')
@@ -169,6 +175,8 @@ namespace DIS_Assignmnet1_SPRING_2022
                 // write your code here
                 int sr = 0;
                 int le = bull_bucks.Length; // // length of an array
+                  if(le >= 1 && le <=100) // constraints
+                  {
                 foreach (int e in bull_bucks) // //  iterate over the elements of the collection
                 {
                     int num = 0;
@@ -183,6 +191,7 @@ namespace DIS_Assignmnet1_SPRING_2022
                     {
                         sr = sr + e; // // it will add to le
                     } 
+                }
                 }
                 return sr;
             }
@@ -265,6 +274,7 @@ namespace DIS_Assignmnet1_SPRING_2022
                 // write your code here.
                 string[] ml = new string[bulls_string.Length]; // length of bulls_string
                 string le = "";
+                 if (bulls_string.Length >= 1 && bulls_string.Length <= 100 && indices.Length >= 0 && indices.Length <= 100) ; // constraints
                 for (int jk = 0; jk < bulls_string.Length; jk++) // for loop and incrementing the jk
                 {
                     int sf = indices[jk];
@@ -313,7 +323,15 @@ namespace DIS_Assignmnet1_SPRING_2022
         private static string ReversePrefix(string bulls_string6, char ch)
         {
             try
-            {
+            {int len = bulls_string6.Length;
+                if (bulls_string6.Any(char.IsUpper))// exceptions
+                {
+                    Console.WriteLine("Input string contains Upper case letter");
+                }
+                if (len > 250)         //user exceptions
+                {
+                    Console.WriteLine("Length of input string should be less than " + len);
+                }
                 string[] sf = new string[bulls_string6.Length];
                 for (int j = 0; j < bulls_string6.Length; j++) // for loop and incrementing the value
                 {
