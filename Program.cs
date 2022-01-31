@@ -218,9 +218,9 @@ namespace DIS_Assignmnet1_SPRING_2022
             {
                 // write your code here.
                 int le = bulls_grid.Length;
-                int se = Convert.ToInt32(Math.Sqrt(le));
+                int se = Convert.ToInt32(Math.Sqrt(le)); // convert to integer to 32-bit signed integer
                 int ab = 0;
-                for (int jk = 0; jk < se; jk++)
+                for (int jk = 0; jk < se; jk++) // for loop and incrementing the jk 
                 {
                     ab = ab + bulls_grid[jk, jk] + bulls_grid[jk, se - jk - 1];
                 }
@@ -263,14 +263,14 @@ namespace DIS_Assignmnet1_SPRING_2022
             try
             {
                 // write your code here.
-                string[] ml = new string[bulls_string.Length];
+                string[] ml = new string[bulls_string.Length]; // length of bulls_string
                 string le = "";
-                for (int jk = 0; jk < bulls_string.Length; jk++)
+                for (int jk = 0; jk < bulls_string.Length; jk++) // for loop and incrementing the jk
                 {
                     int sf = indices[jk];
                     ml[sf] = Convert.ToString(bulls_string[jk]);
                 }
-                for (int jk = 0; jk < bulls_string.Length; jk++)
+                for (int jk = 0; jk < bulls_string.Length; jk++) // for loop and the condition jk is less than length of bull string then jk increments
                 {
                     le = le + ml[jk];
                 }
@@ -315,11 +315,11 @@ namespace DIS_Assignmnet1_SPRING_2022
             try
             {
                 string[] sf = new string[bulls_string6.Length];
-                for (int j = 0; j < bulls_string6.Length; j++)
+                for (int j = 0; j < bulls_string6.Length; j++) // for loop and incrementing the value
                 {
-                    if (bulls_string6[j] == ch)
+                    if (bulls_string6[j] == ch) // bull string is equivalent to ch
                     {
-                        sf = bulls_string6.Split(ch);
+                        sf = bulls_string6.Split(ch); 
                     }
                 }
                 string le = "";
